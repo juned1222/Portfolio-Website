@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="24" fill="#0b080c" />
+  <rect width="96" height="96" x="2" y="2" rx="22" fill="none" stroke="url(#grad)" stroke-width="2" opacity="0.6" />
+  <text x="50" y="66" font-family="'Geist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="44" font-weight="800" fill="url(#grad)" text-anchor="middle" filter="url(#glow)">JS</text>
+</svg>
