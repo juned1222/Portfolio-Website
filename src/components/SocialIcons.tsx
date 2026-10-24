@@ -1,8 +1,8 @@
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
-  FaXTwitter,
+  FaEnvelope,
+  FaPhone,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
@@ -60,27 +60,27 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com" target="_blank">
+          <a href="https://github.com/juned1222" target="_blank" rel="noopener noreferrer" title="GitHub">
             <FaGithub />
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com" target="_blank">
+          <a href="https://www.linkedin.com/in/junedshaikh01" target="_blank" rel="noopener noreferrer" title="LinkedIn">
             <FaLinkedinIn />
           </a>
         </span>
         <span>
-          <a href="https://x.com" target="_blank">
-            <FaXTwitter />
+          <a href="mailto:junedshekhkhan@gmail.com" title="Email">
+            <FaEnvelope />
           </a>
         </span>
         <span>
-          <a href="https://www.instagram.com" target="_blank">
-            <FaInstagram />
+          <a href="tel:+917771064554" title="Phone">
+            <FaPhone />
           </a>
         </span>
       </div>
-      <a className="resume-button" href="#">
+      <a className="resume-button" href="mailto:junedshekhkhan@gmail.com?subject=Resume%20Request%20-%20Juned%20Shaikh">
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />

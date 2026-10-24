@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070e24"/>
+      <stop offset="50%" stop-color="#0c1840"/>
+      <stop offset="100%" stop-color="#050a1c"/>
+    </linearGradient>
+    <filter id="glow4" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#bgGrad4)"/>
+
+  <circle cx="680" cy="150" r="130" fill="#3b82f6" opacity="0.15" filter="url(#glow4)"/>
+  <circle cx="140" cy="360" r="120" fill="#6366f1" opacity="0.12" filter="url(#glow4)"/>
+
+  <!-- Badge -->
+  <g transform="translate(48, 45)">
+    <rect width="240" height="34" rx="17" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="20" cy="17" r="6" fill="#60a5fa" filter="url(#glow4)"/>
+    <text x="36" y="22" fill="#bfdbfe" font-family="'Inter', sans-serif" font-size="12" font-weight="600" letter-spacing="1">ALGORITHMS &amp; SYSTEMS</text>
+  </g>
+
+  <!-- Title -->
+  <text x="48" y="125" fill="#ffffff" font-family="'Geist', 'Inter', sans-serif" font-size="24" font-weight="700">C++ &amp; Data Structures (DSA)</text>
+  <text x="48" y="152" fill="#93c5fd" font-family="'Inter', sans-serif" font-size="14" font-weight="400">Algorithmic Problem Solving · Complexity Optimization · Graph &amp; Tree Structures</text>
+
+  <!-- Binary Tree / Graph Visualization Card -->
+  <g transform="translate(48, 180)">
+    <rect width="440" height="260" rx="14" fill="#0c1736" stroke="#1d4ed8" stroke-width="1.5"/>
+    <text x="24" y="35" fill="#e2e8f0" font-family="'Inter', sans-serif" font-size="14" font-weight="600">Binary Search Tree &amp; Graph Traversal</text>
+
+    <!-- Tree Nodes -->
+    <g transform="translate(40, 50)">
+      <!-- Connections -->
+      <line x1="180" y1="25" x2="100" y2="75" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="180" y1="25" x2="260" y2="75" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="100" y1="75" x2="60" y2="135" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="100" y1="75" x2="140" y2="135" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="260" y1="75" x2="220" y2="135" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="260" y1="75" x2="300" y2="135" stroke="#3b82f6" stroke-width="2"/>
+
+      <!-- Root -->
+      <circle cx="180" cy="25" r="18" fill="#1e40af" stroke="#60a5fa" stroke-width="2" filter="url(#glow4)"/>
+      <text x="180" y="30" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">50</text>
+
+      <!-- Level 1 -->
+      <circle cx="100" cy="75" r="16" fill="#1e3a8a" stroke="#38bdf8" stroke-width="2"/>
+      <text x="100" y="80" fill="#ffffff" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">25</text>
+
+      <circle cx="260" cy="75" r="16" fill="#1e3a8a" stroke="#38bdf8" stroke-width="2"/>
+      <text x="260" y="80" fill="#ffffff" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">75</text>
+
+      <!-- Level 2 -->
+      <circle cx="60" cy="135" r="14" fill="#0f172a" stroke="#93c5fd" stroke-width="1.5"/>
+      <text x="60" y="139" fill="#ffffff" font-family="monospace" font-size="10" text-anchor="middle">10</text>
+
+      <circle cx="140" cy="135" r="14" fill="#0f172a" stroke="#93c5fd" stroke-width="1.5"/>
+      <text x="140" y="139" fill="#ffffff" font-family="monospace" font-size="10" text-anchor="middle">35</text>
+
+      <circle cx="220" cy="135" r="14" fill="#0f172a" stroke="#93c5fd" stroke-width="1.5"/>
+      <text x="220" y="139" fill="#ffffff" font-family="monospace" font-size="10" text-anchor="middle">60</text>
+
+      <circle cx="300" cy="135" r="14" fill="#0f172a" stroke="#93c5fd" stroke-width="1.5"/>
+      <text x="300" y="139" fill="#ffffff" font-family="monospace" font-size="10" text-anchor="middle">90</text>
+    </g>
+
+    <!-- Bottom info -->
+    <rect x="24" y="215" width="392" height="30" rx="6" fill="#09132b"/>
+    <text x="35" y="235" fill="#60a5fa" font-family="monospace" font-size="11">Complexity: O(log N) Search · O(1) Auxiliary Space</text>
+  </g>
+
+  <!-- Right Side Card -->
+  <g transform="translate(515, 180)">
+    <rect width="235" height="260" rx="14" fill="#0a1533" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="24" y="38" fill="#ffffff" font-family="'Inter', sans-serif" font-size="15" font-weight="600">Core Focus</text>
+
+    <g transform="translate(24, 65)">
+      <rect width="185" height="36" rx="8" fill="#132247" stroke="#1d4ed8"/>
+      <text x="16" y="23" fill="#e2e8f0" font-family="'Inter', sans-serif" font-size="12">C++ Programming</text>
+
+      <rect y="48" width="185" height="36" rx="8" fill="#132247" stroke="#1d4ed8"/>
+      <text x="16" y="23" fill="#e2e8f0" font-family="'Inter', sans-serif" font-size="12">Trees, Graphs &amp; DP</text>
+
+      <rect y="96" width="185" height="36" rx="8" fill="#132247" stroke="#1d4ed8"/>
+      <text x="16" y="23" fill="#e2e8f0" font-family="'Inter', sans-serif" font-size="12">Algorithm Analysis</text>
+
+      <rect y="144" width="185" height="36" rx="8" fill="#132247" stroke="#1d4ed8"/>
+      <text x="16" y="23" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Active Practice</text>
+    </g>
+  </g>
+</svg>

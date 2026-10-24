@@ -87,24 +87,21 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
-              <h4>Description</h4>
+              <h3>DEVELOPMENT</h3>
+              <h4>Frontend &amp; Web Systems</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                Building responsive, modern, and user-friendly web applications. Crafting clean interfaces, seamless user flows, and connecting frontend components with backend API services.
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Skillset &amp; tools</h5>
               <div className="what-content-flex">
+                <div className="what-tags">HTML</div>
+                <div className="what-tags">CSS</div>
                 <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
                 <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
                 <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+                <div className="what-tags">Frontend Development</div>
+                <div className="what-tags">API Integration</div>
+                <div className="what-tags">Responsive UI</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -128,22 +125,20 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
-              <h4>Description</h4>
+              <h3>AI &amp; APIS</h3>
+              <h4>AI Workflows &amp; Core CS</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                Hands-on experience developing AI-assisted application workflows, integrating intelligent APIs, practicing C++ Data Structures &amp; Algorithms, and publishing research.
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Skillset &amp; tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">C++</div>
+                <div className="what-tags">DSA (Practicing)</div>
+                <div className="what-tags">AI Tools &amp; Services</div>
+                <div className="what-tags">API Integration</div>
+                <div className="what-tags">AI Workflows</div>
+                <div className="what-tags">Problem Solving</div>
+                <div className="what-tags">Technical Research</div>
               </div>
               <div className="what-arrow"></div>
             </div>
