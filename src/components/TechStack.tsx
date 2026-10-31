@@ -13,31 +13,18 @@ import {
 import Marquee from "react-fast-marquee";
 import "./styles/TechStack.css";
 
-// Technology icons from react-icons
+// Technology & design icons
 import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiJavascript,
-  SiNodedotjs,
-  SiExpress,
-  SiMongodb,
-  SiMysql,
   SiCplusplus,
-  SiTailwindcss,
   SiHtml5,
   SiCss3,
-  SiThreedotjs,
-  SiGit,
-  SiPostman,
-  SiVercel,
 } from "react-icons/si";
-import { TbBrain } from "react-icons/tb";
+import { TbHierarchy2, TbPalette } from "react-icons/tb";
 import { HiOutlineSparkles, HiOutlineCube } from "react-icons/hi2";
 
 export interface TechItem {
   name: string;
-  category: "frontend" | "backend" | "languages" | "tools";
+  category: "programming" | "web" | "design";
   categoryLabel: string;
   icon: React.ReactNode;
   color: string;
@@ -48,188 +35,112 @@ export interface TechItem {
 
 const techItems: TechItem[] = [
   {
-    name: "React",
-    category: "frontend",
-    categoryLabel: "Frontend",
-    icon: <SiReact />,
-    color: "#61DAFB",
-    glow: "rgba(97, 218, 251, 0.35)",
-    description: "Component architecture, hooks, state management, & SPA development.",
-    level: "Advanced",
-  },
-  {
-    name: "Next.js",
-    category: "frontend",
-    categoryLabel: "Full-Stack",
-    icon: <SiNextdotjs />,
-    color: "#ffffff",
-    glow: "rgba(255, 255, 255, 0.25)",
-    description: "Server-side rendering, App Router, hybrid static pages & SEO.",
-    level: "Proficient",
-  },
-  {
-    name: "TypeScript",
-    category: "languages",
-    categoryLabel: "Language",
-    icon: <SiTypescript />,
-    color: "#3178C6",
-    glow: "rgba(49, 120, 198, 0.35)",
-    description: "Type-safe codebases, interfaces, generics, & maintainable architecture.",
-    level: "Intermediate",
-  },
-  {
-    name: "JavaScript (ES6+)",
-    category: "languages",
-    categoryLabel: "Language",
-    icon: <SiJavascript />,
-    color: "#F7DF1E",
-    glow: "rgba(247, 223, 30, 0.35)",
-    description: "Asynchronous programming, DOM manipulation, closures, and modern syntax.",
-    level: "Advanced",
-  },
-  {
     name: "C++",
-    category: "languages",
-    categoryLabel: "Core CS",
+    category: "programming",
+    categoryLabel: "Core CS & Systems",
     icon: <SiCplusplus />,
     color: "#00599C",
-    glow: "rgba(0, 89, 156, 0.4)",
-    description: "Data Structures, Algorithms (DSA), competitive problem solving & memory.",
-    level: "Active Practice",
+    glow: "rgba(0, 89, 156, 0.45)",
+    description: "Standard Template Library (STL), memory management, computational logic, and algorithmic problem solving (DSA).",
+    level: "Advanced Practice",
   },
   {
-    name: "Node.js",
-    category: "backend",
-    categoryLabel: "Backend",
-    icon: <SiNodedotjs />,
-    color: "#5FA04E",
-    glow: "rgba(95, 160, 78, 0.35)",
-    description: "Event-driven runtime, scalable backend services, and REST APIs.",
+    name: "Object-Oriented Programming (OOPs)",
+    category: "programming",
+    categoryLabel: "Software Architecture",
+    icon: <TbHierarchy2 />,
+    color: "#a855f7",
+    glow: "rgba(168, 85, 247, 0.45)",
+    description: "Encapsulation, Abstraction, Inheritance, Polymorphism, modular class design, and SOLID architectural principles.",
     level: "Proficient",
   },
   {
-    name: "Express.js",
-    category: "backend",
-    categoryLabel: "Backend",
-    icon: <SiExpress />,
-    color: "#e2e8f0",
-    glow: "rgba(226, 232, 240, 0.25)",
-    description: "Middleware pipelines, routing, authentication, and HTTP endpoints.",
-    level: "Proficient",
-  },
-  {
-    name: "MongoDB",
-    category: "backend",
-    categoryLabel: "Database",
-    icon: <SiMongodb />,
-    color: "#47A248",
-    glow: "rgba(71, 162, 72, 0.35)",
-    description: "Document storage, Mongoose schemas, indexing, and aggregations.",
-    level: "Intermediate",
-  },
-  {
-    name: "MySQL",
-    category: "backend",
-    categoryLabel: "Database",
-    icon: <SiMysql />,
-    color: "#4479A1",
-    glow: "rgba(68, 121, 161, 0.35)",
-    description: "Relational modeling, SQL queries, normalization, and relational joins.",
-    level: "Intermediate",
-  },
-  {
-    name: "AI Workflows & APIs",
-    category: "tools",
-    categoryLabel: "AI & APIs",
-    icon: <TbBrain />,
-    color: "#c084fc",
-    glow: "rgba(192, 132, 252, 0.4)",
-    description: "Prompt workflows, AI compliance tools, and intelligent API integrations.",
-    level: "Applied",
-  },
-  {
-    name: "Tailwind CSS",
-    category: "frontend",
-    categoryLabel: "Styling",
-    icon: <SiTailwindcss />,
-    color: "#38BDF8",
-    glow: "rgba(56, 189, 248, 0.35)",
-    description: "Utility-first responsive layouts, themes, and sleek UI micro-interactions.",
-    level: "Proficient",
-  },
-  {
-    name: "HTML5 & CSS3",
-    category: "frontend",
-    categoryLabel: "Core Web",
-    icon: (
-      <span style={{ display: "inline-flex", gap: "4px" }}>
-        <SiHtml5 />
-        <SiCss3 />
-      </span>
-    ),
+    name: "HTML5",
+    category: "web",
+    categoryLabel: "Web Core",
+    icon: <SiHtml5 />,
     color: "#E34F26",
-    glow: "rgba(227, 79, 38, 0.35)",
-    description: "Semantic web standards, accessibility, flexbox, CSS grid, and animations.",
+    glow: "rgba(227, 79, 38, 0.45)",
+    description: "Semantic markup, accessible DOM structure, modern HTML5 API standards, form validation, and SEO best practices.",
     level: "Advanced",
   },
   {
-    name: "Three.js / WebGL",
-    category: "frontend",
-    categoryLabel: "3D Graphics",
-    icon: <SiThreedotjs />,
-    color: "#d8b4fe",
-    glow: "rgba(216, 180, 254, 0.35)",
-    description: "Interactive 3D scenes, particle physics, shaders, and React Three Fiber.",
-    level: "Intermediate",
+    name: "CSS3",
+    category: "web",
+    categoryLabel: "Styling & Layouts",
+    icon: <SiCss3 />,
+    color: "#1572B6",
+    glow: "rgba(21, 114, 182, 0.45)",
+    description: "Flexbox, CSS Grid, responsive design, keyframe animations, glassmorphism, micro-interactions, and modern styling systems.",
+    level: "Advanced",
   },
   {
-    name: "Git & GitHub",
-    category: "tools",
-    categoryLabel: "Version Control",
-    icon: <SiGit />,
-    color: "#F05032",
-    glow: "rgba(240, 80, 50, 0.35)",
-    description: "Branching strategies, commits, collaboration, and pull requests.",
-    level: "Proficient",
-  },
-  {
-    name: "Postman",
-    category: "tools",
-    categoryLabel: "API Testing",
-    icon: <SiPostman />,
-    color: "#FF6C37",
-    glow: "rgba(255, 108, 55, 0.35)",
-    description: "API testing, automated endpoint collections, and response validation.",
-    level: "Proficient",
-  },
-  {
-    name: "Vercel",
-    category: "tools",
-    categoryLabel: "Cloud / DevOps",
-    icon: <SiVercel />,
-    color: "#f8fafc",
-    glow: "rgba(248, 250, 252, 0.3)",
-    description: "Continuous deployment, serverless functions, and edge network analytics.",
-    level: "Proficient",
+    name: "Graphic Designing",
+    category: "design",
+    categoryLabel: "Creative & Visuals",
+    icon: <TbPalette />,
+    color: "#EC4899",
+    glow: "rgba(236, 72, 153, 0.45)",
+    description: "UI/UX layout design, creative visual branding, typography, color harmony, vector assets, and digital media design.",
+    level: "Creative & Proficient",
   },
 ];
 
-// 3D Physics Balls Setup for the interactive playground mode
-const textureLoader = new THREE.TextureLoader();
-const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
-];
-const textures = imageUrls.map((url) => textureLoader.load(url));
+// Helper to generate dynamic high-res glowing badge textures for physics spheres
+function createSkillTexture(title: string, color: string, bg: string): THREE.CanvasTexture {
+  const canvas = document.createElement("canvas");
+  canvas.width = 512;
+  canvas.height = 512;
+  const ctx = canvas.getContext("2d");
+  if (ctx) {
+    // Background gradient
+    const grad = ctx.createRadialGradient(256, 256, 20, 256, 256, 256);
+    grad.addColorStop(0, bg);
+    grad.addColorStop(0.7, "#0f0b18");
+    grad.addColorStop(1, "#08050e");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, 512, 512);
+
+    // Glowing border ring
+    ctx.beginPath();
+    ctx.arc(256, 256, 200, 0, Math.PI * 2);
+    ctx.lineWidth = 14;
+    ctx.strokeStyle = color;
+    ctx.shadowColor = color;
+    ctx.shadowBlur = 35;
+    ctx.stroke();
+
+    // Inner subtle ring
+    ctx.beginPath();
+    ctx.arc(256, 256, 175, 0, Math.PI * 2);
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.25)";
+    ctx.shadowBlur = 0;
+    ctx.stroke();
+
+    // Centered skill text
+    ctx.shadowColor = color;
+    ctx.shadowBlur = 20;
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "bold 64px Geist, Montserrat, sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(title, 256, 256);
+
+    // Subtitle indicator
+    ctx.shadowBlur = 0;
+    ctx.font = "bold 20px Geist, sans-serif";
+    ctx.fillStyle = color;
+    ctx.fillText("SKILL ARSENAL", 256, 320);
+  }
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.needsUpdate = true;
+  return texture;
+}
+
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
-const spheres = [...Array(24)].map(() => ({
-  scale: [0.75, 1, 0.85, 1.1][Math.floor(Math.random() * 4)],
+const spheres = [...Array(20)].map(() => ({
+  scale: [0.8, 1, 0.9, 1.15][Math.floor(Math.random() * 4)],
 }));
 
 type SphereProps = {
@@ -326,18 +237,25 @@ const TechStack: React.FC<TechStackProps> = ({ isDesktopView = true }) => {
   const [viewMode, setViewMode] = useState<"grid" | "3d">("grid");
 
   const materials = useMemo(() => {
-    return textures.map(
-      (texture) =>
-        new THREE.MeshPhysicalMaterial({
-          map: texture,
-          emissive: "#ffffff",
-          emissiveMap: texture,
-          emissiveIntensity: 0.35,
-          metalness: 0.5,
-          roughness: 0.9,
-          clearcoat: 0.15,
-        })
-    );
+    const skillConfigs = [
+      { name: "C++", color: "#38bdf8", bg: "#034078" },
+      { name: "OOPs", color: "#c084fc", bg: "#4a154b" },
+      { name: "HTML5", color: "#fb923c", bg: "#7c2d12" },
+      { name: "CSS3", color: "#60a5fa", bg: "#1e3a8a" },
+      { name: "DESIGN", color: "#f472b6", bg: "#831843" },
+    ];
+    return skillConfigs.map((cfg) => {
+      const texture = createSkillTexture(cfg.name, cfg.color, cfg.bg);
+      return new THREE.MeshPhysicalMaterial({
+        map: texture,
+        emissive: "#ffffff",
+        emissiveMap: texture,
+        emissiveIntensity: 0.4,
+        metalness: 0.6,
+        roughness: 0.7,
+        clearcoat: 0.3,
+      });
+    });
   }, []);
 
   const filteredItems = useMemo(() => {
@@ -353,13 +271,13 @@ const TechStack: React.FC<TechStackProps> = ({ isDesktopView = true }) => {
       <div className="techstack-header">
         <div className="techstack-badge">
           <span className="techstack-badge-dot"></span>
-          <span>Technical Arsenal</span>
+          <span>Core Competencies</span>
         </div>
         <h2 className="techstack-title">
-          Tech <span>Stack</span>
+          Technical <span>Skills</span>
         </h2>
         <p className="techstack-subtitle">
-          A structured toolkit of languages, modern frameworks, databases, and developer workflows I use to build scalable web applications.
+          Specialized in C++ algorithms, Object-Oriented software design, semantic HTML, modern CSS styling, and creative graphic design.
         </p>
       </div>
 
@@ -370,10 +288,9 @@ const TechStack: React.FC<TechStackProps> = ({ isDesktopView = true }) => {
           <div className="techstack-categories">
             {[
               { id: "all", label: "All Skills" },
-              { id: "frontend", label: "Frontend" },
-              { id: "backend", label: "Backend & DB" },
-              { id: "languages", label: "Languages & Core" },
-              { id: "tools", label: "Tools & AI" },
+              { id: "programming", label: "C++ & OOPs" },
+              { id: "web", label: "HTML & CSS" },
+              { id: "design", label: "Graphic Design" },
             ].map((cat) => (
               <button
                 key={cat.id}
@@ -444,7 +361,7 @@ const TechStack: React.FC<TechStackProps> = ({ isDesktopView = true }) => {
         /* Content: 3D Physics Playground Mode (Desktop) */
         <div className="tech-3d-wrapper">
           <div className="tech-3d-hint">
-            💡 Move your mouse to push &amp; interact with the floating tech spheres
+            💡 Move your mouse to push &amp; interact with the floating skill spheres
           </div>
           <Canvas
             shadows
@@ -470,7 +387,7 @@ const TechStack: React.FC<TechStackProps> = ({ isDesktopView = true }) => {
                   key={i}
                   {...props}
                   material={
-                    materials[Math.floor(Math.random() * materials.length)]
+                    materials[i % materials.length]
                   }
                 />
               ))}
@@ -491,14 +408,14 @@ const TechStack: React.FC<TechStackProps> = ({ isDesktopView = true }) => {
       <div className="techstack-ticker">
         <Marquee speed={45} gradient={false} pauseOnHover={true}>
           {[
-            "Full-Stack Development",
-            "RESTful API Integration",
-            "Data Structures & Algorithms (C++)",
-            "Modern React & Next.js",
-            "Clean Code & Architecture",
-            "Responsive & Accessible UI",
-            "AI-Enabled Workflows",
-            "Database Systems (SQL & NoSQL)",
+            "C++ (Data Structures & Algorithmic Problem Solving)",
+            "Object-Oriented Programming (OOPs Architecture)",
+            "Semantic HTML5 Web Structure",
+            "Modern CSS3 Animations & Responsive Design",
+            "Graphic Designing & Creative Visual Identity",
+            "UI/UX & Digital Media Design",
+            "Clean Code & Modular Object Design",
+            "Problem Solving & Computational Logic",
           ].map((item, idx) => (
             <div className="ticker-item" key={idx}>
               <span className="ticker-dot">✦</span>

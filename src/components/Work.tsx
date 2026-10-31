@@ -10,9 +10,9 @@ const projects = [
   {
     title: "AI Legal Metrology Compliance",
     category: "Smart India Hackathon 2026",
-    tools: "React, Node.js, HTML, CSS, JavaScript, AI Tools & APIs",
+    tools: "HTML, CSS, UI Design, Problem Solving",
     description:
-      "Frontend & technical integration of an AI/API-enabled system for product/package compliance screening with automated assessment workflows.",
+      "Frontend & technical user interface implementation for an automated package compliance screening solution at SIH 2026.",
     image: "/images/sih-project.svg",
     link: "https://github.com/juned1222",
   },
@@ -26,20 +26,20 @@ const projects = [
     link: "https://www.linkedin.com/in/junedshaikh01",
   },
   {
-    title: "Modern Web Applications",
-    category: "Frontend & Web Development",
-    tools: "HTML, CSS, JavaScript, React, Node.js, REST APIs",
+    title: "Creative Web & UI Design",
+    category: "Web & Graphic Design",
+    tools: "HTML5, CSS3, Graphic Designing, UI/UX",
     description:
-      "Designing responsive, interactive web interfaces and integrating frontend functionality with robust backend API services.",
+      "Designing responsive web layouts and creative digital assets with expressive visuals, modern CSS styling, and visual aesthetics.",
     image: "/images/web-dev.svg",
     link: "https://github.com/juned1222",
   },
   {
-    title: "C++ & Data Structures (DSA)",
+    title: "C++ & OOPs Problem Solving",
     category: "Core Computer Science",
-    tools: "C++, Data Structures, Algorithms, Problem Solving",
+    tools: "C++, OOPs, Data Structures, Algorithms",
     description:
-      "Currently practicing algorithmic problem solving, trees, graphs, dynamic programming, and computational efficiency in C++.",
+      "Algorithmic problem solving, object-oriented architecture, modular design patterns, and computational efficiency in C++.",
     image: "/images/dsa-cpp.svg",
     link: "https://github.com/juned1222",
   },

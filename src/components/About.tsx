@@ -6,7 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Computer Science undergraduate with practical exposure to AI-enabled applications, API integration, frontend development and problem solving. Interested in AI, developer communities and building practical technology solutions. Seeking opportunities to contribute, learn and engage with emerging AI technologies.
+          Computer Science undergraduate passionate about C++, Object-Oriented Programming (OOPs), Web Technologies (HTML, CSS), and Graphic Designing. Dedicated to clean algorithmic problem solving, structured software design, and crafting visually compelling user interfaces and digital experiences.
         </p>
         <div className="about-details">
           <div className="about-detail-item">

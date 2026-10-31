@@ -87,21 +87,20 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOPMENT</h3>
-              <h4>Frontend &amp; Web Systems</h4>
+              <h3>WEB &amp; DESIGN</h3>
+              <h4>HTML, CSS &amp; Graphic Designing</h4>
               <p>
-                Building responsive, modern, and user-friendly web applications. Crafting clean interfaces, seamless user flows, and connecting frontend components with backend API services.
+                Crafting visually striking, responsive web layouts and creative digital designs. Combining strong visual aesthetics, typography, and color theory with clean, semantic HTML and modern CSS styling.
               </p>
               <h5>Skillset &amp; tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">HTML</div>
-                <div className="what-tags">CSS</div>
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Frontend Development</div>
-                <div className="what-tags">API Integration</div>
-                <div className="what-tags">Responsive UI</div>
+                <div className="what-tags">HTML5</div>
+                <div className="what-tags">CSS3</div>
+                <div className="what-tags">Graphic Designing</div>
+                <div className="what-tags">UI/UX Design</div>
+                <div className="what-tags">Visual Branding</div>
+                <div className="what-tags">Responsive Layouts</div>
+                <div className="what-tags">Creative Typography</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -125,20 +124,20 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>AI &amp; APIS</h3>
-              <h4>AI Workflows &amp; Core CS</h4>
+              <h3>PROGRAMMING</h3>
+              <h4>C++ &amp; OOPs Architecture</h4>
               <p>
-                Hands-on experience developing AI-assisted application workflows, integrating intelligent APIs, practicing C++ Data Structures &amp; Algorithms, and publishing research.
+                Building structured, efficient programs using C++ and Object-Oriented Programming (OOPs). Applying encapsulation, inheritance, polymorphism, design patterns, and algorithmic problem-solving.
               </p>
               <h5>Skillset &amp; tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">C++</div>
-                <div className="what-tags">DSA (Practicing)</div>
-                <div className="what-tags">AI Tools &amp; Services</div>
-                <div className="what-tags">API Integration</div>
-                <div className="what-tags">AI Workflows</div>
+                <div className="what-tags">OOPs Concepts</div>
+                <div className="what-tags">Data Structures</div>
                 <div className="what-tags">Problem Solving</div>
-                <div className="what-tags">Technical Research</div>
+                <div className="what-tags">Modular Architecture</div>
+                <div className="what-tags">Design Patterns</div>
+                <div className="what-tags">Algorithmic Logic</div>
               </div>
               <div className="what-arrow"></div>
             </div>
