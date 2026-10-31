@@ -70,7 +70,7 @@ const SocialIcons = () => {
           </a>
         </span>
         <span>
-          <a href="mailto:junedshekhkhan@gmail.com" title="Email">
+          <a href="mailto:juned.shaikh.77710@gmail.com" title="Email">
             <FaEnvelope />
           </a>
         </span>
@@ -80,7 +80,7 @@ const SocialIcons = () => {
           </a>
         </span>
       </div>
-      <a className="resume-button" href="mailto:junedshekhkhan@gmail.com?subject=Resume%20Request%20-%20Juned%20Shaikh">
+      <a className="resume-button" href="mailto:juned.shaikh.77710@gmail.com?subject=Resume%20Request%20-%20Juned%20Shaikh">
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />
