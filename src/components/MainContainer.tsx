@@ -9,6 +9,7 @@ import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
+import ArcadeGame from "./ArcadeGame";
 
 const TechStack = lazy(() => import("./TechStack"));
 
@@ -34,6 +35,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
       <Cursor />
       <Navbar />
       <SocialIcons />
+      <ArcadeGame />
       {isDesktopView && children}
       <div id="smooth-wrapper">
         <div id="smooth-content">

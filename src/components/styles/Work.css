@@ -33,10 +33,14 @@
   flex-direction: column;
   width: 600px;
   box-sizing: border-box;
-  border-right: 1px solid #363636;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
   flex-shrink: 0;
   gap: 50px;
   justify-content: start;
+  transition: background 0.4s ease;
+}
+.work-box:hover {
+  background: rgba(168, 85, 247, 0.025);
 }
 .work-flex .work-box:nth-child(even) {
   flex-direction: column-reverse;

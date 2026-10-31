@@ -263,6 +263,23 @@ const TechStack: React.FC<TechStackProps> = ({ isDesktopView = true }) => {
     return techItems.filter((item) => item.category === activeCategory);
   }, [activeCategory]);
 
+  const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -10;
+    const rotateY = ((x - centerX) / centerX) * 10;
+    card.style.transform = `perspective(700px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-6px) scale(1.02)`;
+  };
+
+  const handleCardMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    card.style.transform = `perspective(700px) rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)`;
+  };
+
   return (
     <section className="techstack-section" id="skills">
       <div className="techstack-ambient"></div>
@@ -335,6 +352,8 @@ const TechStack: React.FC<TechStackProps> = ({ isDesktopView = true }) => {
             <div
               key={tech.name}
               className="tech-card"
+              onMouseMove={handleCardMouseMove}
+              onMouseLeave={handleCardMouseLeave}
               style={
                 {
                   "--tech-color": tech.color,

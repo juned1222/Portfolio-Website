@@ -1,0 +1,312 @@
+/* Floating Arcade Launcher Button */
+.arcade-launcher {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: rgba(18, 14, 28, 0.85);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  border-radius: 9999px;
+  color: #ffffff;
+  font-family: "Geist", -apple-system, sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(168, 85, 247, 0.25);
+  backdrop-filter: blur(16px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.arcade-launcher:hover {
+  transform: translateY(-4px) scale(1.03);
+  border-color: rgba(56, 189, 248, 0.8);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 30px rgba(56, 189, 248, 0.4);
+  background: rgba(28, 20, 44, 0.95);
+}
+
+.arcade-launcher-icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  animation: arcadePulse 2s infinite ease-in-out;
+}
+
+@keyframes arcadePulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(-8deg);
+  }
+}
+
+.arcade-launcher-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+  animation: launcherDotBlink 1.5s infinite;
+}
+
+@keyframes launcherDotBlink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.3);
+  }
+}
+
+/* Modal Overlay */
+.arcade-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(6, 4, 10, 0.82);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.arcade-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal Box */
+.arcade-modal {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  background: rgba(18, 14, 28, 0.95);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 50px rgba(168, 85, 247, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.92) translateY(20px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arcade-modal-overlay.active .arcade-modal {
+  transform: scale(1) translateY(0);
+}
+
+/* Modal Header */
+.arcade-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.arcade-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.arcade-title-group h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arcade-title-group h3 span {
+  background: linear-gradient(135deg, #c084fc, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.arcade-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(168, 85, 247, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #d8b4fe;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.arcade-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.arcade-icon-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.arcade-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+/* Status Bar: Score, Lives, HighScore */
+.arcade-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 13.5px;
+}
+
+.arcade-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.arcade-stat-item strong {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.arcade-hearts {
+  color: #ef4444;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+/* Canvas Container */
+.arcade-canvas-wrap {
+  position: relative;
+  width: 100%;
+  background: #08050e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arcade-canvas {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  display: block;
+  cursor: grab;
+}
+
+.arcade-canvas:active {
+  cursor: grabbing;
+}
+
+/* Overlay Inside Canvas (Start / GameOver / Victory) */
+.arcade-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 5, 14, 0.88);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  z-index: 10;
+}
+
+.arcade-overlay h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.arcade-overlay p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+.arcade-play-btn {
+  background: linear-gradient(135deg, #a855f7, #38bdf8);
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+.arcade-play-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
+}
+
+/* Footer Instructions */
+.arcade-footer {
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.arcade-footer span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .arcade-launcher {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  .arcade-status-bar {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
