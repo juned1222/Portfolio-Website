@@ -2,7 +2,6 @@ import {
   FaGithub,
   FaLinkedinIn,
   FaEnvelope,
-  FaPhone,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
@@ -72,11 +71,6 @@ const SocialIcons = () => {
         <span>
           <a href="mailto:juned.shaikh.77710@gmail.com" title="Email">
             <FaEnvelope />
-          </a>
-        </span>
-        <span>
-          <a href="tel:+917771064554" title="Phone">
-            <FaPhone />
           </a>
         </span>
       </div>
