@@ -13,21 +13,6 @@ const setLighting = (scene: THREE.Scene) => {
   directionalLight.shadow.camera.far = 50;
   scene.add(directionalLight);
 
-  // Purple Neon Rim Light (Left) - outlines hair, left ear and shoulder
-  const rimLightLeft = new THREE.DirectionalLight(0xa855f7, 0);
-  rimLightLeft.position.set(-6, 14, -8);
-  scene.add(rimLightLeft);
-
-  // Purple Neon Rim Light (Right) - outlines hair, right ear and shoulder
-  const rimLightRight = new THREE.DirectionalLight(0xc084fc, 0);
-  rimLightRight.position.set(6, 15, -7);
-  scene.add(rimLightRight);
-
-  // Soft Warm Front-Fill Light - keeps facial features, eyes and expression crisp
-  const frontFillLight = new THREE.DirectionalLight(0xffeedd, 0);
-  frontFillLight.position.set(0, 13, 16);
-  scene.add(frontFillLight);
-
   const pointLight = new THREE.PointLight(0xc2a4ff, 0, 100, 3);
   pointLight.position.set(3, 12, 4);
   pointLight.castShadow = true;
@@ -59,21 +44,6 @@ const setLighting = (scene: THREE.Scene) => {
     });
     gsap.to(directionalLight, {
       intensity: 1,
-      duration: duration,
-      ease: ease,
-    });
-    gsap.to(rimLightLeft, {
-      intensity: 3.5,
-      duration: duration,
-      ease: ease,
-    });
-    gsap.to(rimLightRight, {
-      intensity: 2.8,
-      duration: duration,
-      ease: ease,
-    });
-    gsap.to(frontFillLight, {
-      intensity: 0.75,
       duration: duration,
       ease: ease,
     });

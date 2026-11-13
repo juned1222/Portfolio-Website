@@ -2,7 +2,6 @@ import * as THREE from "three";
 import { DRACOLoader, GLTF, GLTFLoader } from "three-stdlib";
 import { setCharTimeline, setAllTimeline } from "../../utils/GsapScroll";
 import { decryptFile } from "./decrypt";
-import { upgradeHeroCharacter } from "./characterUpgrade";
 
 const setCharacter = (
   renderer: THREE.WebGLRenderer,
@@ -28,7 +27,6 @@ const setCharacter = (
           blobUrl,
           async (gltf) => {
             character = gltf.scene;
-            upgradeHeroCharacter(gltf, character, scene);
             await renderer.compileAsync(character, camera, scene);
             character.traverse((child: any) => {
               if (child.isMesh) {
